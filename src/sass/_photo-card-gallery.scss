@@ -1,0 +1,16 @@
+.gallery-section {
+  color: white;
+  padding-top: 30px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.3vw;
+  margin-bottom: 30px;
+}
+
+.photo-card {
+  flex-basis: 20vw;
+  font-size: 10px;
+}
