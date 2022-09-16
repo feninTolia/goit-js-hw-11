@@ -2,12 +2,18 @@
 
 body {
   background-color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 img {
   object-fit: cover;
   width: 20vw;
   height: 20vw;
+}
+
+.is-hidden {
+  display: none;
 }
 
 .container {
@@ -24,11 +30,16 @@ img {
 
   margin-bottom: 30px;
 
-  background-color: #b6b6f3;
+  background-color: #bdbdff;
   border-radius: 5px;
   border: 2px solid transparent;
+  transition: background-color 250ms ease-out;
 }
 
-.is-hidden {
-  display: none;
+.load-more-btn:hover {
+  background-color: #ffffff;
+}
+
+.load-more-btn:active {
+  background-color: #9be8be;
 }
