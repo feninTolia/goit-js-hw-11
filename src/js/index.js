@@ -57,7 +57,7 @@ const renderGallery = async enteredQuery => {
 
     lightbox.refresh();
 
-    if (data.hits.length === 0) {
+    if (data.total === 0) {
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.',
         notiflixFailureOpt
@@ -76,13 +76,10 @@ const renderGallery = async enteredQuery => {
 
     if (data.hits.length === fetchPhoto.perPage) {
       refs.loadMoreBtn.classList.remove('is-hidden');
-    } else if (
-      data.hits.length < fetchPhoto.perPage &&
-      data.total > fetchPhoto.perPage
-    ) {
+    } else if (data.hits.length === 0) {
       refs.loadMoreBtn.classList.add('is-hidden');
       Notiflix.Notify.failure(
-        "You've reached the end of search results.",
+        "We're sorry, but you've reached the end of search results.",
         notiflixFailureOpt
       );
     }
